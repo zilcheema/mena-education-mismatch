@@ -55,4 +55,4 @@ This analysis is fully reproducible using the `WDI` API. No manual data download
 ---
 
 ## 📝 Contact
-**Zil-E-Hussnain Cheema** *MSc Applied Economics Candidate | Education Consultant* [Link to your LinkedIn Profile]
+**Zil-E-Hussnain Cheema** *MSc Applied Economics Candidate | Education Consultant* [https://www.linkedin.com/in/zil-cheema/]
