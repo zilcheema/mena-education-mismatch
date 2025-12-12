@@ -1,72 +1,58 @@
-# Project: Education-Employment Mismatch in the MENA Region
+# 📉 Project: Labor Market Elasticity in Transition Economies
 
-**Author:** Zil Cheema  
-**Status:** [Active / Completed]  
-**Tech Stack:** R (tidyverse, ggplot2) / Stata  
-**Date:** December 2025
+**Author:** Zil-E-Hussnain Cheema  
+**Status:** Completed  
+**Tech Stack:** R (tidyverse, WDI, ggplot2)  
+**Data Source:** World Bank Open Data (2010–2024)
 
 ---
 
 ## 📌 Executive Summary
-This project investigates the relationship between **tertiary education completion rates** and **youth unemployment** in the Middle East & North Africa (MENA) region, with a specific focus on Saudi Arabia (KSA) compared to OECD benchmarks (Canada).
+This project investigates the "Education-Employment Mismatch" in the MENA region, specifically comparing **Saudi Arabia (a transition economy)** against **Canada (a developed benchmark)**.
 
-Using World Bank Open Data (2015-2024), the analysis seeks to quantify the "skills mismatch" in transition economies.
+Using World Bank data, I analyzed the correlation between **GDP Per Capita** and **Unemployment among Advanced Degree Holders**. The goal was to test the elasticity of the labor market: *Does economic growth automatically absorb highly skilled graduates?*
 
-**Key Finding:** Preliminary analysis suggests a positive correlation between advanced degree holders and unemployment duration in KSA, highlighting potential structural frictions in the labor market.
+---
+
+## 🔑 Key Findings
+The analysis reveals a structural divergence between the two economies:
+
+* **Saudi Arabia (High Elasticity):** The regression line shows a **steep negative slope**. This indicates that the Saudi labor market is highly sensitive to economic growth; as GDP rises, graduate unemployment drops significantly. This is characteristic of an economy where public sector spending (linked to oil revenue/GDP) is a primary driver of professional employment.
+* **Canada (Low Elasticity):** The trend line is **flatter**. This suggests a mature labor market where graduate unemployment is less about cyclical GDP growth and more likely driven by structural mismatches (skills gaps) that mere economic expansion cannot fix.
 
 ---
 
 ## 📂 Repository Structure
-The project is organized to ensure full reproducibility:
-
-* `data/`
-    * `raw/`: Original datasets downloaded from World Bank (WDI). **(Never edited)**
-    * `processed/`: Cleaned datasets ready for regression analysis.
-* `scripts/`
-    * `01_data_cleaning.R`: Handles missing values and merges country datasets.
-    * `02_exploratory_analysis.R`: Summary statistics and distribution plots.
-    * `03_regression_model.R`: OLS regression specifications.
-* `outputs/`: Generated scatterplots, regression tables (LaTeX/tex), and final PDF brief.
+* **`analysis.R`**: The main R script that fetches live data from the World Bank API, cleans missing values, and generates the regression visualization.
+* **`outputs/`**: Contains the generated charts and visual assets.
+    * `mismatch_plot.png`: The final visualization comparing labor market slopes.
+* **`README.md`**: Project documentation.
 
 ---
 
-## 📊 Methodology & Data
-**Data Source:**
-* **World Bank World Development Indicators (WDI):**
-    * *Indicator 1:* Unemployment, youth total (% of total labor force ages 15-24).
-    * *Indicator 2:* Gross enrollment ratio, tertiary, both sexes (%).
-    * *Indicator 3:* GDP per capita (constant 2015 US$).
+## 📊 Visualizations
+> *The scatter plot below demonstrates the divergence in labor market responsiveness between the two nations.*
 
-**Econometric Approach:**
-I employ a simple Ordinary Least Squares (OLS) model to test the association, controlling for GDP growth:
-
-$$Unemployment_i = \beta_0 + \beta_1 Education_i + \beta_2 GDP_i + \epsilon_i$$
-
-*Note: This analysis is descriptive and does not claim causal identification, though it serves as a basis for further causal inference work.*
+![Labor Market Mismatch Plot](outputs/mismatch_plot.png)
 
 ---
 
-## 📈 Visualizations
-*(Place your generated graph here. For example:)*
-> ![Scatter Plot of Education vs Unemployment](outputs/scatter_plot_ksa_can.png)
-> *Figure 1: Comparison of Graduate Unemployment trends in Saudi Arabia vs. Canada (2015-2024).*
+## 🚀 How to Reproduce
+This analysis is fully reproducible using the `WDI` API. No manual data downloads are required.
 
----
-
-## 🚀 How to Replicate
-To run this analysis on your local machine:
-
-1.  **Clone this repository:**
+1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/zilcheema/mena-education-mismatch.git](https://github.com/zilcheema/mena-education-mismatch.git)
     ```
-2.  **Install dependencies:**
-    * Ensure R (v4.0+) and RStudio are installed.
-    * Run `install.packages(c("tidyverse", "WDI", "stargazer"))`.
-3.  **Run the scripts:**
-    * Open `scripts/01_data_cleaning.R` and click "Run".
+2.  **Open the Project:**
+    Open `Saudi_Labor_Project.Rproj` in RStudio.
+3.  **Run the Analysis:**
+    Open `analysis.R` and click "Source" (or Run All). The script will:
+    * Install necessary libraries (`tidyverse`, `WDI`).
+    * Fetch the latest data from the World Bank.
+    * Save the final plot to the `outputs/` folder.
 
 ---
 
 ## 📝 Contact
-**Zil Cheema** *MSc Applied Economics Candidate, University of Bath* *Education Consultant & Data Analyst* [LinkedIn Profile Link]# mena-education-mismatch
+**Zil-E-Hussnain Cheema** *MSc Applied Economics Candidate | Education Consultant* [Link to your LinkedIn Profile]
