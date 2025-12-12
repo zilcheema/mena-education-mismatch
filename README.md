@@ -17,7 +17,7 @@ Using World Bank data, I analyzed the correlation between **GDP Per Capita** and
 ## 🔑 Key Findings
 The analysis reveals a structural divergence between the two economies:
 
-* **Saudi Arabia (High Elasticity):** The regression line shows a **steep negative slope**. This indicates that the Saudi labor market is highly sensitive to economic growth; as GDP rises, graduate unemployment drops significantly. This is characteristic of an economy where public sector spending (linked to oil revenue/GDP) is a primary driver of professional employment.
+* **Saudi Arabia (High Elasticity):** The regression line shows a **steep negative slope**. This indicates that the Saudi labor market is highly sensitive to economic growth; as GDP rises, graduate unemployment drops significantly. This is characteristic of an economy where public sector spending (linked to oil revenue) is a primary driver of professional employment.
 * **Canada (Low Elasticity):** The trend line is **flatter**. This suggests a mature labor market where graduate unemployment is less about cyclical GDP growth and more likely driven by structural mismatches (skills gaps) that mere economic expansion cannot fix.
 
 ---
@@ -55,4 +55,4 @@ This analysis is fully reproducible using the `WDI` API. No manual data download
 ---
 
 ## 📝 Contact
-**Zil-E-Hussnain Cheema** *MSc Applied Economics Candidate | Education Consultant* [https://www.linkedin.com/in/zil-cheema/]
+**Zil-E-Hussnain Cheema** *MSc Applied Economics Candidate | [https://www.linkedin.com/in/zil-cheema/]
